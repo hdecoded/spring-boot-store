@@ -9,4 +9,4 @@ stripe:
   currencies: USD,EUR,INR
 
 payment:
-  service: stripe
+  service: stripew
