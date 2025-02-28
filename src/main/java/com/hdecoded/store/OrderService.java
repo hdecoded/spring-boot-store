@@ -1,5 +1,8 @@
 package com.hdecoded.store;
 
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
+
 //@Service
 public class OrderService {
 
@@ -8,6 +11,16 @@ public class OrderService {
     public OrderService(PaymentService paymentService) {
         this.paymentService = paymentService;
         System.out.println("OrderService created");
+    }
+
+    @PostConstruct
+    public void init() {
+        System.out.println("OrderService PostConstructs");
+    }
+
+    @PreDestroy
+    public void cleanUp() {
+        System.out.println("OrderService cleanUp");
     }
 
     public void placeOrder() {
