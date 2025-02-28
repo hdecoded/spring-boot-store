@@ -1,4 +1,4 @@
-package com.hdecoded.notification;
+package com.hdecoded.store.notification;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
@@ -13,6 +13,5 @@ public class NotificationManager {
     }
 
     public void sendNotification(String message) {
-        notificationService.send(message);
     }
 }

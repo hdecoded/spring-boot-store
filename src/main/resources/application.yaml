@@ -9,4 +9,8 @@ stripe:
   currencies: USD,EUR,INR
 
 payment:
-  service: stripew
+  service: stripe
+
+email:
+  host: localhost
+  port: 587

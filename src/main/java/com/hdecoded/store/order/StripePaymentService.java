@@ -1,4 +1,4 @@
-package com.hdecoded.store;
+package com.hdecoded.store.order;
 
 import org.springframework.beans.factory.annotation.Value;
 

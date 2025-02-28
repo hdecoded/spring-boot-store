@@ -1,4 +1,4 @@
-package com.hdecoded.store;
+package com.hdecoded.store.order;
 
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;

@@ -1,4 +1,4 @@
-package com.hdecoded.store;
+package com.hdecoded.store.order;
 
 //@Service("paypal")
 public class PayPalPaymentService implements PaymentService {
