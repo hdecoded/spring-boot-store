@@ -7,3 +7,6 @@ stripe:
   enable: true
   timeout: 1000
   currencies: USD,EUR,INR
+
+payment:
+  service: stripe
