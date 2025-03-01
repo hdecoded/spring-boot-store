@@ -3,21 +3,21 @@ package com.hdecoded.store.user;
 import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
+import java.util.Map;
 
 @Repository
 public class InMemoryUserRepository implements UserRepository {
 
-    private final HashMap<String, User> hashMap = new HashMap<>();
+    private final Map<String, User> users = new HashMap<>();
 
     @Override
-    public boolean save(User user) {
-        if (hashMap.containsKey(user.getEmail())) {
-            System.out.println("User already exists");
-            return false;
-        } else {
-            hashMap.put(user.getEmail(), user);
-        }
-        System.out.println(hashMap);
-        return true;
+    public void save(User user) {
+        System.out.println("Saving user: " + user);
+        users.put(user.getEmail(), user);
+    }
+
+    @Override
+    public User findByEmail(String email) {
+        return users.getOrDefault(email, null);
     }
 }

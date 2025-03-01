@@ -1,5 +1,8 @@
 package com.hdecoded.store.user;
 
 public interface UserRepository {
-    public boolean save(User user);
+
+    public void save(User user);
+
+    User findByEmail(String email);
 }

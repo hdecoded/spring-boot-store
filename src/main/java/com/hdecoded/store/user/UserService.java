@@ -14,10 +14,10 @@ public class UserService {
     }
 
     public void registerUser(User user) {
-        var userCreated = userRepository.save(user);
-        if (userCreated) {
-            notificationService.send("User saved", user.getEmail());
+        if (userRepository.findByEmail(user.getEmail()) != null) {
+            throw new IllegalArgumentException("User with email " + user.getEmail() + " already exists");
         }
-        notificationService.send("User already registered", user.getEmail());
+        userRepository.save(user);
+        notificationService.send("You Registered Successfully", user.getEmail());
     }
 }

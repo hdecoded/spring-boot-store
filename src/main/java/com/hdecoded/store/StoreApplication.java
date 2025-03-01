@@ -19,18 +19,8 @@ public class StoreApplication {
 //        context.close();
         ApplicationContext context = SpringApplication.run(StoreApplication.class, args);
         var userService = context.getBean(UserService.class);
-
-        User user1 = new User();
-        user1.setEmail("user1@hotmail.com");
-        user1.setPassword("password");
-        user1.setName("user1");
-        user1.setId(1L);
-        userService.registerUser(user1);
-        User user2 = new User();
-        user2.setEmail("user2@hotmail.com");
-        user2.setPassword("password");
-        user2.setName("user2");
-        user2.setId(2L);
-        userService.registerUser(user2);
+        userService.registerUser(new User(1L, "hd@outlook.in", "Pass", "Hemanth"));
+        userService.registerUser(new User(1L, "hd@outlook.in", "Pass", "Hemanth"));
+        userService.registerUser(new User(2L, "sp@outlook.in", "Pass", "Sowmya"));
     }
 }
